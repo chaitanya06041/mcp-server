@@ -6,17 +6,6 @@ readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
     "mcp[cli]>=1.26.0",
+    "requests>=2.32.5",
 ]
 
-[project.scripts]
-mcp-server = "mcpserver.__main__:main"
-
-[build-system]
-requires = ["setuptools"]
-build-backend = "setuptools.build_meta"
-
-[tool.setuptools]
-package-dir = {"" = "src"}
-
-[tool.setuptools.packages.find]
-where = ["src"]
