@@ -176,7 +176,7 @@ wheels = [
 [[package]]
 name = "deploy"
 version = "0.1.0"
-source = { editable = "." }
+source = { virtual = "." }
 dependencies = [
     { name = "mcp", extra = ["cli"] },
     { name = "requests" },
