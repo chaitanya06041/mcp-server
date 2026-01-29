@@ -1,6 +1,7 @@
 from mcp.server.fastmcp import FastMCP
 import requests
 import random
+import os
 
 mcp = FastMCP("Weather-Service")
 
@@ -22,14 +23,5 @@ def get_weather(city: str) -> str:
 
 
 if __name__ == "__main__":
-    import os
-
-    host = "0.0.0.0"
-    port = int(os.environ.get("PORT", "8000"))
-
-    # Try to pass host/port to mcp.run if supported; otherwise set PORT env and run
-    try:
-        mcp.run(transport="streamable-http", host=host, port=port)
-    except TypeError:
-        os.environ["PORT"] = str(port)
-        mcp.run(transport="streamable-http")
+    port = int(os.environ.get("PORT", 8000))
+    mcp.run(transport="streamable-http", host="0.0.0.0", port=port)
