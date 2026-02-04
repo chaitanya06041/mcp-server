@@ -69,7 +69,7 @@ def get_weather_by_location(city_name: str):
     }
 
 @mcp.tool()
-def get_temperature(city: str) -> dict:
+def get_weather(city: str) -> dict:
     """Get the current weather for a given city."""
     return get_weather_by_location(city)
 
