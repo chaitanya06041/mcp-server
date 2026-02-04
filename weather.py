@@ -75,5 +75,5 @@ def get_temperature(city: str) -> str:
 
 if __name__ == "__main__":
     # Clean up the run command
-    # mcp.run(transport="streamable-http")
-    print(get_weather_by_location("Pune"))
+    mcp.run(transport="streamable-http")
+    # print(get_weather_by_location("Pune"))
